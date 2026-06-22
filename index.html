@@ -21,6 +21,10 @@ td { padding:8px 6px; border-bottom:1px solid #334155; }
 tr:last-child td { border-bottom:none; }
 .status-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
 .section-title { font-size:1rem; font-weight:600; margin:20px 0 10px; color:#e2e8f0; }
+.nav-bar { display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+.nav-link { background:#1e293b; border:1px solid #334155; border-radius:8px; padding:8px 14px; text-decoration:none; color:#cbd5e1; font-size:12px; font-weight:600; transition:.15s; }
+.nav-link:hover { border-color:#a78bfa; background:#2e1065; color:#c4b5fd; transform:translateY(-1px); }
+.nav-link.active { background:#2e1065; border-color:#a78bfa; }
 .footer { margin-top:30px; text-align:center; color:#64748b; font-size:0.75rem; border-top:1px solid #334155; padding-top:15px; }
 .issues { color:#ef4444; font-size:0.8rem; }
 .ok-text { color:#22c55e; }
@@ -32,12 +36,22 @@ a:hover { text-decoration:underline; }
 <body>
 <div class="container">
 <h1>🦁 LEO</h1>
-<div class="subtitle">Global Dashboard · 22/06/2026 07:04</div>
+<div class="subtitle">Global Dashboard · 22/06/2026 07:13</div>
+
+<div class="nav-bar">
+  <a href="https://christophedanhier-hash.github.io/leo-global-dashboard/" class="nav-link active">🌍 Global</a>
+  <a href="https://christophedanhier-hash.github.io/bavi-leo-dashboard/" class="nav-link">🏛️ BAVI LEO</a>
+  <a href="https://christophedanhier-hash.github.io/dashboard-leo/" class="nav-link">📊 Dashboard LEO</a>
+  <a href="https://christophedanhier-hash.github.io/leo-metrics/" class="nav-link">💻 Machines</a>
+  <a href="https://christophedanhier-hash.github.io/crons-dashboard/" class="nav-link">⏱️ Crons</a>
+  <a href="https://christophedanhier-hash.github.io/github-dashboard/" class="nav-link">🐙 GitHub</a>
+  <a href="https://christophedanhier-hash.github.io/dashboard-n8n/" class="nav-link">🔧 n8n</a>
+</div>
 
 <div class="grid">
   <div class="card">
     <h3>⏱️ Crons</h3>
-    <div class="big">23/24</div>
+    <div class="big">24/25</div>
     <div class="muted">✅ tout OK · 1 en attente</div>
   </div>
   <div class="card">
@@ -47,8 +61,8 @@ a:hover { text-decoration:underline; }
   </div>
   <div class="card">
     <h3>💰 Budget DeepSeek</h3>
-    <div class="big">$27.19</div>
-    <div class="muted">~13 jours restants · $2.03/j</div>
+    <div class="big">$27.03</div>
+    <div class="muted">~13 jours restants · $2.04/j</div>
   </div>
   <div class="card">
     <h3>🩺 n8n</h3>
@@ -131,12 +145,12 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td>budget-check-v6</td>
   <td>5 * * * *</td>
-  <td>06:05</td>
+  <td>07:05</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>budget-webhook-watchdog</td>
   <td>*/5 * * * *</td>
-  <td>07:00</td>
+  <td>07:10</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>check-hermes-update</td>
@@ -156,7 +170,7 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td>dashboard-leo</td>
   <td>10 * * * *</td>
-  <td>06:10</td>
+  <td>07:10</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>dashboard-n8n</td>
@@ -219,6 +233,11 @@ a:hover { text-decoration:underline; }
   <td>06:30</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
+  <td>🌍 Global Dashboard</td>
+  <td>5 * * * *</td>
+  <td>07:05</td>
+  <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
+</tr><tr>
   <td>🛡️ Auto-Heal — Watchdog auto-cicatrisant</td>
   <td>45 */1 * * *</td>
   <td>06:49</td>
@@ -229,19 +248,27 @@ a:hover { text-decoration:underline; }
 <tr><td>🖥️ LEO (serveur)</td><td>locale</td><td><span class="ok-text">✅ En ligne</span></td></tr>
 <tr><td>🪟 Yoga (Christophe)</td><td>100.92.102.28</td><td><span class="ok-text">✅ En ligne</span></td></tr>
 <tr><td>🐧 Penguin (NAS/GPU)</td><td>100.113.110.40</td><td><span style="color:#f59e0b;">⚠️ Hors ligne (timeout)</span></td></tr>
-</table><div class="section-title">🔗 Liens rapides</div>
+</table><div class="section-title">🔗 Navigation</div>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
-  <a href="https://christophedanhier-hash.github.io/dashboard-leo/" class="card" style="display:block;color:#e2e8f0;">
-    <h3>📊 LEO KPI</h3>
-    <div class="muted">Sessions · Budget</div>
+  <a href="https://christophedanhier-hash.github.io/leo-global-dashboard/" class="card" style="display:block;color:#e2e8f0;">
+    <h3>🌍 Global</h3>
+    <div class="muted">Portail unique</div>
   </a>
   <a href="https://christophedanhier-hash.github.io/bavi-leo-dashboard/" class="card" style="display:block;color:#e2e8f0;">
     <h3>🏛️ BAVI LEO</h3>
     <div class="muted">KPIs BAVI</div>
   </a>
+  <a href="https://christophedanhier-hash.github.io/dashboard-leo/" class="card" style="display:block;color:#e2e8f0;">
+    <h3>📊 LEO KPI</h3>
+    <div class="muted">Sessions · Budget</div>
+  </a>
+  <a href="https://christophedanhier-hash.github.io/leo-metrics/" class="card" style="display:block;color:#e2e8f0;">
+    <h3>💻 Machines</h3>
+    <div class="muted">CPU/RAM/Disque</div>
+  </a>
   <a href="https://christophedanhier-hash.github.io/crons-dashboard/" class="card" style="display:block;color:#e2e8f0;">
     <h3>⏱️ Crons</h3>
-    <div class="muted">Détail 24 crons</div>
+    <div class="muted">Détail 25 crons</div>
   </a>
   <a href="https://christophedanhier-hash.github.io/github-dashboard/" class="card" style="display:block;color:#e2e8f0;">
     <h3>🐙 GitHub</h3>
@@ -251,14 +278,8 @@ a:hover { text-decoration:underline; }
     <h3>🔧 n8n</h3>
     <div class="muted">Workflows</div>
   </a>
-  <a href="https://christophedanhier-hash.github.io/leo-metrics/" class="card" style="display:block;color:#e2e8f0;">
-    <h3>💻 Machines</h3>
-    <div class="muted">CPU/RAM/Disque</div>
-  </a>
-</div>
-
-<div class="footer">
-  🦁 LEO Global Dashboard · Mis à jour toutes les 10min · 22/06/2026 07:04
+</div><div class="footer">
+  🦁 LEO Global Dashboard · Mis à jour toutes les 10min · 22/06/2026 07:13
 </div>
 </div>
 </body>
