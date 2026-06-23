@@ -31,12 +31,16 @@ tr:last-child td { border-bottom:none; }
 .warn-text { color:#f59e0b; }
 a { color:#3b82f6; text-decoration:none; }
 a:hover { text-decoration:underline; }
+.budget-gauge { margin-top:8px; background:#1e293b; border-radius:6px; height:8px; overflow:hidden; }
+.budget-gauge-fill { height:100%; border-radius:6px; transition:width 0.3s; }
+.budget-alert { background:#7f1d1d; border:1px solid #ef4444; border-radius:8px; padding:10px 14px; margin-top:10px; text-align:center; }
+.budget-alert span { color:#fca5a5; font-weight:600; font-size:13px; }
 </style>
 </head>
 <body>
 <div class="container">
 <h1>🦁 LEO</h1>
-<div class="subtitle">Global Dashboard · 23/06/2026 09:12</div>
+<div class="subtitle">Global Dashboard · 23/06/2026 14:36</div>
 
 <div class="nav-bar">
   <a href="https://christophedanhier-hash.github.io/leo-global-dashboard/" class="nav-link active">🌍 Global</a>
@@ -51,7 +55,7 @@ a:hover { text-decoration:underline; }
 <div class="grid">
   <div class="card">
     <h3>⏱️ Crons</h3>
-    <div class="big">30/30</div>
+    <div class="big">28/28</div>
     <div class="muted">✅ tout OK · 0 en attente</div>
   </div>
   <div class="card">
@@ -61,18 +65,12 @@ a:hover { text-decoration:underline; }
   </div>
   <div class="card">
     <h3>💰 Budget DeepSeek</h3>
-    <div class="big">$24.55</div>
-    <div class="muted">~12 jours restants · $2.09/j</div>
+    <div class="big">$23.77</div>
+    <div class="muted">~11 jours restants · $2.17/j</div>
+    <div class="budget-gauge"><div class="budget-gauge-fill" style="width:37%; background:#fbbf24;"></div></div>
+    
   </div>
-  <div class="card">
-    <h3>🤖 Copilot Claude</h3>
-    <div class="big" style="color:#a78bfa">2.8</div>
-    <div class="muted">1 appels · 0.0 aujourd'hui</div>
-    <div class="muted" style="font-size:0.75rem;margin-top:4px;">
-      ❌ Proxy hors-ligne
-      
-    </div>
-  </div>
+
   <div class="card">
     <h3>🩺 n8n</h3>
     <div class="big">✅ Online</div>
@@ -80,8 +78,8 @@ a:hover { text-decoration:underline; }
   </div>
   <div class="card">
     <h3>🏛️ BAVI LEO</h3>
-    <div class="big">107</div>
-    <div class="muted">6004 messages · 19316k tokens</div>
+    <div class="big">110</div>
+    <div class="muted">5829 messages · 19673k tokens</div>
   </div>
   <div class="card">
     <h3>🖥️ Machines</h3>
@@ -95,27 +93,27 @@ a:hover { text-decoration:underline; }
 <tr><th>Dashboard</th><th>HTTP</th><th>Âge</th><th>Budget</th></tr><tr>
   <td><a href="https://christophedanhier-hash.github.io/dashboard-leo/" target="_blank">LEO</a></td>
   <td><span style="color:#22c55e">✅ 200</span></td>
-  <td>35m</td>
-  <td>$24.66</td>
+  <td>19m</td>
+  <td>$23.77</td>
 </tr><tr>
-  <td><a href="https://christophedanhier-hash.github.io/bavi-leo-dashboard/" target="_blank">BAVI LEO</a></td>
+  <td><a href="https://christophedanhier-hash.github.io/bavi-leo-dashboard/" target="_blank">BAVI LEO</a> 🔄</td>
   <td><span style="color:#22c55e">✅ 200</span></td>
-  <td>20m</td>
-  <td>$24.66</td>
+  <td>60m</td>
+  <td>⚠️ $23.97</td>
 </tr><tr>
   <td><a href="https://christophedanhier-hash.github.io/crons-dashboard/" target="_blank">Crons</a></td>
   <td><span style="color:#22c55e">✅ 200</span></td>
-  <td>25m</td>
+  <td>10m</td>
   <td>—</td>
 </tr><tr>
   <td><a href="https://christophedanhier-hash.github.io/github-dashboard/" target="_blank">GitHub</a></td>
   <td><span style="color:#22c55e">✅ 200</span></td>
-  <td>19m</td>
+  <td>4m</td>
   <td>—</td>
 </tr><tr>
   <td><a href="https://christophedanhier-hash.github.io/dashboard-n8n/" target="_blank">n8n</a> 🔄</td>
   <td><span style="color:#22c55e">✅ 200</span></td>
-  <td>1270m ⚠️</td>
+  <td>100m</td>
   <td>—</td>
 </tr><tr>
   <td><a href="https://christophedanhier-hash.github.io/leo-metrics/" target="_blank">Machines</a></td>
@@ -125,7 +123,7 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td><a href="https://christophedanhier-hash.github.io/leo-global-dashboard/" target="_blank">Global</a> 🔄</td>
   <td><span style="color:#22c55e">✅ 200</span></td>
-  <td>140m ⚠️</td>
+  <td>318m ⚠️</td>
   <td>—</td>
 </tr></table>
 
@@ -134,7 +132,7 @@ a:hover { text-decoration:underline; }
 <tr><th>Cron</th><th>Horaire</th><th>Dernier run</th><th>Statut</th></tr><tr>
   <td>Classifieur emails Christophe</td>
   <td>every 30m</td>
-  <td>08:58</td>
+  <td>14:14</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>Veille IA — analyse DeepSeek + email (phase 2)</td>
@@ -149,27 +147,22 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td>auto-commit-repos</td>
   <td>0 */2 * * *</td>
-  <td>08:00</td>
+  <td>14:00</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>bavi-leo-dashboard</td>
   <td>every 60m</td>
-  <td>08:25</td>
+  <td>14:31</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>budget-check-v6</td>
   <td>5 * * * *</td>
-  <td>09:00</td>
+  <td>14:00</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>check-hermes-update</td>
   <td>0 9 * * *</td>
   <td>09:00</td>
-  <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
-</tr><tr>
-  <td>copilot-tracker</td>
-  <td>every 10m</td>
-  <td>09:06</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>credentials-check</td>
@@ -179,7 +172,7 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td>crons-dashboard</td>
   <td>20 * * * *</td>
-  <td>08:20</td>
+  <td>14:20</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>daily-backup</td>
@@ -189,22 +182,22 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td>dashboard-leo</td>
   <td>10 * * * *</td>
-  <td>09:10</td>
+  <td>14:10</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>dashboard-n8n</td>
   <td>*/15 * * * *</td>
-  <td>09:00</td>
+  <td>14:30</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>dashboard-watch</td>
   <td>30 */2 * * *</td>
-  <td>08:30</td>
+  <td>14:30</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>doc-watch-auto</td>
   <td>0 */6 * * *</td>
-  <td>06:00</td>
+  <td>12:00</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>docs-update</td>
@@ -219,76 +212,71 @@ a:hover { text-decoration:underline; }
 </tr><tr>
   <td>github-dashboard</td>
   <td>25 * * * *</td>
-  <td>08:25</td>
+  <td>14:25</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>leo-metrics</td>
   <td>15 * * * *</td>
-  <td>08:15</td>
+  <td>14:15</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>machines-kpi</td>
   <td>0 * * * *</td>
-  <td>09:00</td>
+  <td>14:01</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>n8n-healthcheck</td>
   <td>*/15 * * * *</td>
-  <td>09:00</td>
+  <td>14:30</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>sync-memory</td>
   <td>*/30 * * * *</td>
-  <td>09:00</td>
+  <td>14:30</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>t600-drive-sync</td>
   <td>36 * * * *</td>
-  <td>08:36</td>
+  <td>14:36</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>watchdog-code-server</td>
   <td>*/5 * * * *</td>
-  <td>09:10</td>
+  <td>14:35</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>watchdog-code-server-tunnel</td>
   <td>*/5 * * * *</td>
-  <td>09:10</td>
-  <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
-</tr><tr>
-  <td>watchdog-copilot-proxy</td>
-  <td>*/5 * * * *</td>
-  <td>09:10</td>
+  <td>14:35</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>wiki-oca-sync</td>
   <td>35 * * * *</td>
-  <td>08:35</td>
+  <td>14:35</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>wiki-sync</td>
   <td>30 * * * *</td>
-  <td>08:30</td>
+  <td>14:30</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>🌍 Global Dashboard</td>
-  <td>5 * * * *</td>
-  <td>09:05</td>
+  <td>6 * * * *</td>
+  <td>14:06</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
 </tr><tr>
   <td>🛡️ Auto-Heal — Watchdog auto-cicatrisant</td>
   <td>45 */1 * * *</td>
-  <td>08:45</td>
+  <td>13:45</td>
   <td><span class="status-dot" style="background:#22c55e"></span>✅</td>
-</tr></table><div class="section-title">🖥️ Machines</div>
+</tr></table><div class="section-title">🚨 Alertes récentes</div><div style="color:#ef4444;font-size:0.85rem;margin:4px 0;">⚠️ BUDGET: BAVI LEO: budget affiche $23.97 vs budget.json $23.77 (diff=$0.20)</div><div class="section-title">🖥️ Machines</div>
 <table>
 <tr><th>Machine</th><th>IP</th><th>Statut</th></tr>
 <tr><td>🖥️ LEO (serveur)</td><td>locale</td><td><span class="ok-text">✅ En ligne</span></td></tr>
 <tr><td>🪟 Yoga (Christophe)</td><td>100.92.102.28</td><td><span class="ok-text">✅ En ligne</span></td></tr>
 <tr><td>🐧 Penguin (NAS/GPU)</td><td>100.113.110.40</td><td><span style="color:#f59e0b;">⚠️ Hors ligne (timeout)</span></td></tr>
 </table><div class="footer">
-  🦁 LEO Global Dashboard · Mis à jour toutes les 10min · 23/06/2026 09:12
+  🦁 LEO Global Dashboard · Mis à jour toutes les 10min · 23/06/2026 14:36
 </div>
 </div>
 </body>
